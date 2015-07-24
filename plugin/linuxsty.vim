@@ -13,12 +13,9 @@ endif
 let g:loaded_linuxsty = 1
 
 function! SetLinuxFormatting()
-    autocmd!
-
-    autocmd FileType c,cpp call s:LinuxSettings()
-    autocmd FileType c,cpp call s:LinuxKeywords()
-    autocmd FileType c,cpp call s:LinuxHighlighting()
-    autocmd FileType diff,kconfig
+    call s:LinuxSettings()
+    call s:LinuxKeywords()
+    call s:LinuxHighlighting()
 
     filetype detect
 endfunc
